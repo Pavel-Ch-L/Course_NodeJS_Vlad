@@ -1,0 +1,21 @@
+{
+  "name": "ch-2-06",
+  "version": "1.0.0",
+  "description": "Test NodeJS package",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "JS",
+    "Node",
+    "Test"
+  ],
+  "author": "Pavel Ch <pavel79@yandex.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {}
+}

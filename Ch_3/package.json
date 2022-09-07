@@ -1,0 +1,19 @@
+{
+  "name": "fs_ch_3",
+  "version": "1.0.0",
+  "description": "//Разбор req.body (у каждого <input> д.б. атрибут name)\r app.use(EXPRESS.urlencoded({extended: true}))\r ------------------------------------------------------\r //:id динамический параметр находится в req.params.id. Создается новый layout\r router.get('/:id', async(req, res) => {\r   const course = await Course.getById(req.params.id)\r     if(course) {\r       res.render('course', {\r       layout: 'empty',\r       title: `Курс ${course.title}`,\r       course\r     })\r ------------------------------------------------------\r // объект, содержащий все GET-параметры;\r req.query.allow",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "uuid": "^8.3.2"
+  }
+}
