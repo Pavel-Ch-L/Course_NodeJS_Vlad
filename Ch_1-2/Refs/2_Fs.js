@@ -8,6 +8,7 @@ function makeFolder() {
     console.log("Папка создана ...");
   })
 }
+
  //Запись в файл 'MyNotes.txt'
 function writeInFile() {
   fs.writeFile(path.join(__dirname, 'notes', 'MyNotes.txt'), 'Hello World !!!', err => {
@@ -15,6 +16,7 @@ function writeInFile() {
     console.log('Файл создан ...');
   })
 }
+
  //Добавление в файл 'MyNotes.txt'
 function appendInFile() {
   fs.appendFile(path.join(__dirname, 'notes', 'MyNotes.txt'), '\nAdd note', err => {
@@ -22,7 +24,10 @@ function appendInFile() {
     console.log('Строка добавлена ...');
   })
 }
+
  //Файл 'notes' читается ассинхронно
+ //data без указания кодировки представляет из себя buffer
+ //Без указания кодировки можно раскодировать Buffer с помощю Buffer.from(data).toString()
 function readFileAsync() {
   fs.readFile(path.join(__dirname, 'notes', 'MyNotes.txt'), 'utf-8', (err, data) => {
     if(err) throw err;
@@ -30,6 +35,7 @@ function readFileAsync() {
     console.log(data);
   })
 }
+
  //Переименование файла 'notes' => 'MyNotes'
 function renameFile() {
   fs.rename(
@@ -38,6 +44,7 @@ function renameFile() {
     err => { if(err) throw err; console.log('Файл переименован...') }
   )
 }
+
 // Удаление файла или папки 'notes'
 function deleteFile() {
   fs.rm(path.join(__dirname, 'notes', 'MyNotes.txt'), err => {

@@ -2,6 +2,7 @@
 ## (Mongo, GraphQL, MySQL, Express)
 ### Автор: Владилен Минин
 #### Приступил к изучению: 21.03.2022
+&emsp; 
 ***
 [Раздел  1, 2 --  Введение. Основы NodeJS.](https://github.com/Pavel-Ch-L/Course_NodeJS_Vlad/tree/master/Ch_1-2)  
 &emsp; 
@@ -22,6 +23,6 @@
 &emsp; 
 
 [Раздел  8   ----    Практика: Деплой приложения.](https://github.com/Pavel-Ch-L/Course_NodeJS_Vlad/tree/master/Ch_8)
-
-
-&emsp; Приложенеие на хостинге heroku.com -- https://sheltered-brushlands-55391.herokuapp.com/
+***  
+&emsp;  
+&emsp;&emsp; Приложенеие на хостинге heroku.com -- https://sheltered-brushlands-55391.herokuapp.com/
