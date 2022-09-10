@@ -117,9 +117,9 @@
 # Информация
 * Разбор req.body (у каждого \<input> д.б. атрибут name)
 * app.use(EXPRESS.urlencoded({extended: true}))
-* /:id динамический параметр находится в req.params.id
-* объект, содержащий все GET-параметры req.query.allow
-* объект, который хранит данные, передаваемые POST или PUT запросом req.body
+* req.params.id     /:id динамический параметр 
+* req.query.allow   объект, содержащий все GET-параметры 
+* req.body          объект, который хранит данные, передаваемые POST или PUT запросом 
 ***
 ### Создается новый layout
 <pre>router.get('/:id', async(req, res) => {
