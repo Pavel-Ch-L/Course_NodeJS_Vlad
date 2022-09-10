@@ -113,13 +113,13 @@
 	• Исправить форматирование цены
 	• Вывести данные о корзине на страницу
 ***
-&emsp;  
+&emsp;
 # Информация
-* Разбор req.body (у каждого \<input> д.б. атрибут name)
-* app.use(EXPRESS.urlencoded({extended: true}))
-* req.params.id     /:id динамический параметр 
-* req.query.allow   объект, содержащий все GET-параметры 
-* req.body          объект, который хранит данные, передаваемые POST или PUT запросом 
+	• Разбор req.body (у каждого \<input> д.б. атрибут name)
+	• app.use(EXPRESS.urlencoded({extended: true}))
+	• req.params.id     /:id динамический параметр 
+	• req.query.allow   объект, содержащий все GET-параметры 
+	• req.body          объект, который хранит данные, передаваемые POST или PUT запросом
 ***
 ### Создается новый layout
 <pre>router.get('/:id', async(req, res) => {
@@ -132,14 +132,15 @@
   })</pre>
 ***
 ### Точка входа текущего приложения 
-* path.join(path.dirname(require.main.filename)
+	• path.join(path.dirname(require.main.filename)
 ***
 ### Деструкция и возврат из функции
-* candidate = (({title, price, id}) => ({title, price, id}))(course)
+	• candidate = (({title, price, id}) => ({title, price, id}))(course)
 ***
 ### Форматирование чисел
-* Intl.NumberFormat
+	• Intl.NumberFormat
 ***
-\&ensp; - Два пробела  
-\&emsp; - Четыре пробела
+### Отступы в html
+	• \&ensp; - Два пробела  
+	• \&emsp; - Четыре пробела
 ***
