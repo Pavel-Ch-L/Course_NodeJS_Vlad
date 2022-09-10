@@ -1,5 +1,5 @@
-const path          = require('path')
 const express       = require('express')
+const path          = require('path')
 const exphbs        = require('express-handlebars')
 const routeHome     = require('./routes/routerHome')
 const routeCart     = require('./routes/routerCart')

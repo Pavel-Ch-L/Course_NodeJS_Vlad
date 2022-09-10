@@ -1,7 +1,7 @@
 # 3. Практика. Express.js
 &emsp;  
 ### 1. Настройка приложения
-	• Создать проект npm Init -y
+	• Создать проект npm init -y
 	• Установить express, nodemon
 	• Создать файл index.js
 	• Настроить express, PORT, скрипты (npm run dev)
@@ -24,9 +24,9 @@
 	• Обернуть в .container {{{body}}}
 
 ### 5. Добавление навигации
-	• Добавить navbar.hbs отредактировать меню' 'Главная' 'Курсы' 'Добавить курс'
+	• Добавить partials/navbar.hbs отредактировать меню' 'Главная' 'Курсы' 'Добавить курс'
 	• Сделать отступы в меню (создать папку public)
-	• app.use(express.static('public'))
+	• В index.js подключить app.use(express.static(path.join(__dirname,'public')))
 
 ### 6. Рендеринг данных
 	• Подсветить активные ссылки в меню
@@ -39,36 +39,37 @@
 
 ### 8. Обработка формы
 	• Создать форму на странице add.hbs (action='/add' method='post')
-	• Добавить разметку из materialize/forms/textInput  + валидацию (title, price, img )
+	• Добавить разметку из materialize/forms/textInput  + валидацию. name=(title, price, img )
 	• Добавить кнопку 'Добавить курс'
 	• Добавить мидлвэр app.use(express.urlencoded({extanded: true})
 	• Обработать post запрос в роутере addRoute вывести в консоль данные
 
 ### 9. Создание модели
 	• Создать папку models/course.js
-	• Подключить uuid
-	• Доработать роутер addRoute
-	• Cоздать класс Course и конструктор с полем id
+	• Подключить uuid (позволить генерировать ключи)
+	• Доработать роутер routes/routerAdd подключить model/course
+	• Обработать post '/' (создать и сохранить новый курс)
+	• Cоздать класс Course и конструктор с полем this.id = uuid.v4()
 	• Создать метод Save()
 	• Создать папку data и файл courses.json []
-	• Создать метод getAll()
+	• Создать статический метод getAll() (читать массив курсов)
 	• Создать метод создания объекта toJson()
 	• Проверить работу функций в log
-	• После добавления курса перейти на стр courses
+	• После сохранения курса перейти на стр courses
 
 ### 10. Вывод списка курсов
-	• Написать роурер coursesRoutes
-	• Вывести все курсы на страницу courses.hbs если они есть (materialize Cart)
+	• Написать роурер routes/routerCourses get '/'
+	• Вывести все курсы на страницу courses.hbs (materialize Cart), если они есть 
 	• Добавить ссылку на стр курсов 'открыть курс' href='/courses/{{id}}'
 
 ### 11. Подключение клиентских скриптов
-	• Форматировать цену (Intl.numberFormat) + fz 2rem
+	• Форматировать цену на фронтэнде app.js (Intl.numberFormat) + fz 2rem
 
 ### 12. Динамические параметры
-	• Cоздать файл course.hbs (title img price)
+	• Cоздать файл views/course.hbs (title img price)
 	• Добавить новые стили (все по центру, ширину img, price)
 	• Обработать нажатие 'открыть курс' в новом layouts/empty (без навбар и контейнера) на нов странице
-	• Создать функцию getById()  в models/course.js и роутинг в courses.js
+	• Создать функцию getById()  в models/course.js и роутинг в routes/routerCourses.js (get 'courses/:id')
 
 ### 13. Редактирование курса
 	• Добавит новую ссылку на стр "Курсы" 'Pедактировать' courses/id/edit?allow=true
@@ -120,6 +121,8 @@
 	• req.params.id     /:id динамический параметр 
 	• req.query.allow   объект, содержащий все GET-параметры 
 	• req.body          объект, который хранит данные, передаваемые POST или PUT запросом
+	• res.sendFile(path.join(__dirName, 'vievs', 'index.html')) //Отправка html из файла на клиент
+	• <li class={{#if isCourse}} active {{/if}}><a href="/courses">Courses</a></li> //Подсветка активного меню
 ***
 ### Создается новый layout
 <pre>router.get('/:id', async(req, res) => {
