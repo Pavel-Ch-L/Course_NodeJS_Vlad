@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded({extended: true}))
 app.use(async(req, res, next) => {
   try {
-    const user = await User.findById('62f7b8e0ec0d1f108ab082f0')
+    const user = await User.findById('631daa7084caa1cb55014e63')
     req.user = user
     next()
   } catch (error) {
