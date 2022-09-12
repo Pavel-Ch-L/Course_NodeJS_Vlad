@@ -23,7 +23,9 @@
 	• Поправить разметку
 
 ### 6. Модель пользователя
-	• Создать файл models/user.js (модель пользователя) emai: string req, name: string req, cart: {items: [ {count: {number req def=1}, courseId: {type: Schema.Types.ObjectId, ref: 'Course', req} } ]
+	• Создать файл models/user.js (модель пользователя) emai: string req, 
+		name: string req, cart: {items: [ {count: {number req def=1}, 
+		courseId: {type: Schema.Types.ObjectId, ref: 'Course', req} } ]
 
 ### 7. Добавление пользователя
 	• В index.js создать и сохранить пользователя в базе если его еще нет
@@ -39,7 +41,8 @@
 
 ### 9. Отображение корзины
 	• Отредактировать роут cart get '/' 
-	• Создать вспомогательные функции mapCartItems(для получения массива курсов без метаданных), computePrice(вычисление общей стоимости) 
+	• Создать вспомогательные функции mapCartItems(для получения массива курсов без метаданных), 
+		computePrice(вычисление общей стоимости) 
 	• Получить в виде cart={courses[{}], price: 0)
 	• Вывести состояние корзины на экран
 
@@ -53,28 +56,31 @@
 	• В роутере cart исправить метод mapCartItems()  для преобразования _id => id
 
 ### 12. Подготовка страницы заказов
-	• Добавить в views/cart.hbs (form '/orders/' + btn cделать заказ)
-	• Редактировать navbar '/orders'
-	• Добавить файл rotes/orders.js
-	• Редактировать index.js новый роут
-	• Добавить в роутер get '/'
+	• Добавить в views/cart.hbs (form post '/orders/' + btn cделать заказ)
+	• Редактировать navbar добавить '/orders'
+	• Добавить файл rotes/routerOrders.js
+	• Редактировать index.js (новый роут)
+	• Добавить в роутер get '/' (вывод заказов)
 	• Добавить в views/orders.hbs <h1>
 	• Добавить в роутер post '/'
-	• Создать модель orders.js {courses[ {course, count} ], user: {name, userId}, date } 
+	• Создать модель orders.js {courses[ {course:Object, count:number} ], 
+		user: {name:String, userId:Schema.Types.ObjectId}, date:Date } 
 
 ### 13. Получение данных заказов
-	• Дописать роутер post '/orders' (получить курсы из корзины в формате [ {count, course: {}}, … ]), создать модель Order
+	• Дописать роутер post '/orders' (получить курсы из корзины пользователя 
+		в формате [ {count, course: {}}, … ]), создать модель Order
 	• Сохранить модель Order
 	• Очистить корзину clearCart() в user.schema
-	• Дописать роутер get '/orders' (получить все ордеры пользователя, вернуть на фронтенд orders: [ {…order, price} ] )
+	• Дописать роутер get '/orders' (получить все ордеры пользователя,
+		 вернуть на фронтенд заказы пользователя orders: [ {…order, price}, {}... ] )
 
 ### 14. Вывод заказов
-	• Редактировать orders.hbs ( вывести если есть, id заказа, дата, пользователь (name, email), список: курс - количество, цена)
+	• Редактировать orders.hbs ( вывести если есть:
+		 id заказа, дата, пользователь (name, email), список: курс - количество, цена заказа)
 	• Форматировать дату в шаблоне orders.hbs
 ***
 &emsp;
-# Информация  
-***
+# Информация
 	• Перед запуском с новой базой заменить userId в index.js стр. 37 (взять из новой базы)
 ***
 	• course.save() //Сохранить в базу
