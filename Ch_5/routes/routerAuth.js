@@ -14,7 +14,7 @@ router.get('/login', (req, res) => {
   })
 })
 
-router.get('/logout', (req, res) => {
+router.get('/logout', async(req, res) => {
   req.session.destroy(() => {
     res.redirect('/auth/login#login')
   })
@@ -52,7 +52,7 @@ router.post('/register', async(req, res) => {
     hashPassword = await bcrypt.hash(password, 10)
     const user = new User({ email, name, password: hashPassword, cart: {items: []} })
     await user.save()
-    res.redirect('/')
+    res.redirect('/auth/login#login')
   }
 })
 
