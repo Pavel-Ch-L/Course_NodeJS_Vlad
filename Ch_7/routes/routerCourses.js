@@ -47,7 +47,7 @@ router.post('/edit', auth, courseValidators, async(req, res) => {
   const {id} = req.body
   const errors = validationResult(req)
   if(!errors.isEmpty()) {
-    //return res.redirect(`/courses/${id}/edit?allow=true`)
+    //return res.redirect(`/courses/${id}/edit?allow=true`) //Решение из курса
     return res.status(422).render('course-edit', {
       title: 'Редактировать курс',
       isAdd: true,
@@ -55,7 +55,8 @@ router.post('/edit', auth, courseValidators, async(req, res) => {
       course: {
         title: req.body.title,
         price: req.body.price,
-        img: req.body.img
+        img: req.body.img,
+        id: req.body.id
       }
     })
   }

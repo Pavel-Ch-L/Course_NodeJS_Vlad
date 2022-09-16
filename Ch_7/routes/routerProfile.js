@@ -21,8 +21,8 @@ router.post('/', auth, async(req, res) => {
     }
     if (req.file) {
       if (user.avatarUrl) {
-        console.log('Deleteting file ..', path.basename(path.join(__dirname, user.avatarUrl)) )
-        fs.unlink(path.join(__dirname, '/../' ,user.avatarUrl), (err) => {
+        console.log('Deleting file ..', path.basename(path.join(__dirname, user.avatarUrl)) )
+        fs.unlink(path.join(__dirname, '/../', user.avatarUrl), (err) => {
           if (err) 
           console.log('ERROR deleting file ', err);
         });

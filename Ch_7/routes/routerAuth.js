@@ -27,7 +27,7 @@ router.get('/logout', (req, res) => {
   })
 })
 
-router.post('/login',loginValidators, async(req, res) => {
+router.post('/login', loginValidators, async(req, res) => {
   const errors = validationResult(req)
   if(!errors.isEmpty()) {
     req.flash('errorLogin', errors.array()[0].msg)
@@ -46,7 +46,8 @@ router.post('/login',loginValidators, async(req, res) => {
   } 
 })
 
-router.post('/register',registerValidators, async(req, res) => {
+router.post('/register', registerValidators, async(req, res) => {
+  try {
     const errors = validationResult(req)
     if(!errors.isEmpty()) {
       req.flash('errorRegister', errors.array()[0].msg)
@@ -58,6 +59,9 @@ router.post('/register',registerValidators, async(req, res) => {
     await user.save()
     res.redirect('/')
     await mailTransport(regEmail(email, name))
+  } catch (error) {
+    console.log(error);
+  }
 })
 
 router.get('/reset', (req, res) => {
