@@ -3,7 +3,7 @@ const keys = require('../keys')
 module.exports = function (email, name, token) {
   return {
     'subject':'Восстановление доступа',
-    'sender' : keys.mailSender,
+    'sender' : {'email':'api@sendinblue.com', 'name':'Sendinblue'},
     //'replyTo' : {'email':'api@sendinblue.com', 'name':'Sendinblue'},
     'to' : [{'name': `${name}`, 'email': `${email}`}],
     'htmlContent' : `

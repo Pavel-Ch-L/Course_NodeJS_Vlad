@@ -41,7 +41,7 @@ exports.loginValidators = [
   body('password', 'Пароль должен быть от 2 - 6 символов').isLength({min: 2, max: 12}).isAlphanumeric().trim().custom(async(value, {req}) => {
     try {
       const user = await User.findOne({email: req.body.email})
-      if (!await bcrypt.compare(value, user.password)) {
+      if (user && !await bcrypt.compare(value, user.password)) {
         return Promise.reject('Пароль не совпадает')
       }
     } catch (error) {

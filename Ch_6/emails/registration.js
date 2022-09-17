@@ -4,7 +4,7 @@ const private = require('../keys')
 module.exports = function (email, name) {
   return {
     'subject':'Магазин курсов',
-    'sender' : keys.mailSender,
+    'sender' : {'email':'api@sendinblue.com', 'name':'Sendinblue'},
     'to' : [{'name': `${name}`, 'email': `${email}`}],
     'htmlContent' : `
       <html>
