@@ -19,11 +19,15 @@
 	• Установить Heroku CLI (heroku -v //показать версию)
 	• heroku login в консоли
 	• heroku create в консоли (создать проект)
-	• На сайте проекта settings нажать 'reveal config vars'  (ввести ключ-значение кроме BASE_URL заменить на новый адрес ресурса без слэша на конце)
-	• Перейти на сайте проекта в 'deploy' (инициализировать  Git если нет, добавить в gitignore node_modules keys/keys.dev.js) добавить в стэйдж сделать комит, проверить наличие в package.json scripts: {start: node index.js}
+	• На сайте проекта settings нажать 'reveal config vars'  (ввести ключ-значение кроме 
+		BASE_URL заменить на новый адрес ресурса без слэша на конце)
+	• Перейти на сайте проекта в 'deploy' (инициализировать  Git если нет, добавить в 
+		gitignore node_modules keys/keys.dev.js) добавить в стэйдж сделать комит, проверить 
+		наличие в package.json scripts: {start: node index.js}
 	• heroku git: remote -a <cкопировать со страницы deploy>
 	• git push heroku master
-	• На странице проекта нажать 'open app' (возможна ошибка mongoDb на странице проекта посмотреть 'Activity' - log или в консоли heroku logs)
+	• На странице проекта нажать 'open app' (возможна ошибка mongoDb на странице проекта посмотреть 
+		'Activity' - log или в консоли heroku logs)
 
 ### 5. Настройка Mongo Atlas
 	• Проверить доступность по ip
