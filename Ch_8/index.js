@@ -46,7 +46,7 @@ app.use('/images', express.static(path.join(__dirname,'images')))
 app.use(express.urlencoded({extended: true}))
 const store = new MongoStore({
   collection: 'sessions',
-  uri: keys.mongoUrl
+  uri: keys.mongoLoc
 })
 app.use(session({
   secret: keys.secret,
@@ -77,7 +77,7 @@ app.use(errorHandler)
 
 async function start() {
   try {
-    await mongoose.connect(keys.mongoUrl, {
+    await mongoose.connect(keys.mongoLoc, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
