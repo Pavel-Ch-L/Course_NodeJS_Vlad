@@ -1,5 +1,4 @@
 const keys = require('../keys')
-const private = require('../keys')
 
 module.exports = function (email, name) {
   return {
