@@ -1,9 +1,5 @@
 module.exports = {
 
-  // Данные авторизации для bd 
-  mongoLog:     'login mongodb',
-  mongoPass:    'password mongodb',
-
   // Строка подключения к удаленной bd
   mongoUrl:     'mongodb+srv://<username>:<password>@cluster0.ny6ee.mongodb.net/<name bd>?retryWrites=true&w=majority',
 
@@ -18,9 +14,6 @@ module.exports = {
 
   // API key сервера рассылок писем
   sendBlueAPI:  'your API key', 
-
-  // Адрес и имя отправителя в теле писем
-  mailSender:   {'email':'api@sendinblue.com', 'name':'Sendinblue'}, 
 
   // Адрес ссылки в теле письма
   baseURL:      'http://localhost:3000' 
