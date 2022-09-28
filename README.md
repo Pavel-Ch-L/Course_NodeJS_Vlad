@@ -22,7 +22,10 @@
 [Раздел  7   ----    Практика: Валидация и файлы.](https://github.com/Pavel-Ch-L/Course_NodeJS_Vlad/tree/master/Ch_7)  
 &emsp; 
 
-[Раздел  8   ----    Практика: Деплой приложения.](https://github.com/Pavel-Ch-L/Course_NodeJS_Vlad/tree/master/Ch_8)
+[Раздел  8   ----    Практика: Деплой приложения.](https://github.com/Pavel-Ch-L/Course_NodeJS_Vlad/tree/master/Ch_8)  
+&emsp; 
+
+[Раздел  9   ----    БД MySQL – REST API приложение](https://github.com/Pavel-Ch-L/Course_NodeJS_Vlad/tree/master/REST)
 ***  
 &emsp;  
 &emsp;&emsp; Приложенеие на хостинге heroku.com -- https://warm-shore-66481.herokuapp.com/
