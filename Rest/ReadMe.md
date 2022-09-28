@@ -61,11 +61,11 @@
 &emsp;
 # Информация
 	• await sequelize.sync({force: true})	//удаляет существующую таблицу и создает новую
-	• User.sync({ alter: true })			//приводит таблицу в соответствие с моделью
-	• app.use(express.json())				//Из buffer в json
-	• Todo.findAll() 						//Найти все
-	• Todo.findAll({})						//Найти по условию
-	• Todo.create({})						//Создать и сохранить
-	• Todo.findByPk(+req.params.id)			//Найти по id primary key
-	• todos[0].destroy()					//Удалить запись
+	• User.sync({ alter: true })		//приводит таблицу в соответствие с моделью
+	• app.use(express.json())		//Из buffer в json
+	• Todo.findAll() 			//Найти все
+	• Todo.findAll({})			//Найти по условию
+	• Todo.create({})			//Создать и сохранить
+	• Todo.findByPk(+req.params.id)		//Найти по id primary key
+	• todos[0].destroy()			//Удалить запись
 ***
