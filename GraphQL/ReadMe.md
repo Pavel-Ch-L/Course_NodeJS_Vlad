@@ -1,8 +1,13 @@
 # 10. GraphQL
 &emsp;  
 ### 1. Что такое GraphQL
-	•
+	• Скопировать проект Rest
+
+### 2. Настройка GraphQL
+	• 
 
 ***
 &emsp;
-# Информация
+# Информация  
+	• https://graphql.org/
+	• 
