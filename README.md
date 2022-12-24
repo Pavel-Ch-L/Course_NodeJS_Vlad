@@ -31,4 +31,4 @@
 [Раздел  10   ---   GraphQL приложение.](https://github.com/Pavel-Ch-L/Course_NodeJS_Vlad/tree/master/GraphQL)  
 ***  
 &emsp;  
-&emsp;&emsp; Приложенеие на хостинге heroku.com -- https://warm-shore-66481.herokuapp.com/
+&emsp;&emsp; Приложенеие на хостинге cyclic.sh -- https://alive-erin-mussel.cyclic.app
